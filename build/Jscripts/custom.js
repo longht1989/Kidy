@@ -107,11 +107,11 @@ $(function() {
     $('.filter__location .btn').click(function() {
         // show big map
         $('.big-map').show();
-        $('.big-map').animate({
-            width: "100%",
-            height: "100%",
-            display: 'block'
-        },'slow');
+        // $('.big-map').animate({
+        //     width: "100%",
+        //     height: "100%",
+        //     display: 'block'
+        // },'slow');
         // hide box filter
         $('.filter__location').slideUp();
     });
@@ -122,6 +122,7 @@ $(function() {
         // show box filter
         $('.filter__location').slideDown();
     });
+
 });
 
 /*  ===
@@ -153,4 +154,20 @@ $('.bxslider').bxSlider({
             $('.bxslider-control .fa').css('top', positionTop / 2);
         });
     }
+});
+
+/*  ===
+    slider for gds detail
+    === */
+$('.l-slider .slider').bxSlider({
+    minSlides: 1,
+    maxSlides: 4,
+    slideWidth: 270,
+    slideMargin: 20,
+    pager: false,
+    adaptiveHeight: true,
+    prevText: '',
+    nextText: '',
+    nextSelector: '#bxslider-next',
+    prevSelector: '#bxslider-prev'
 });
