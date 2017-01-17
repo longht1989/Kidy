@@ -9,6 +9,8 @@ $(function() {
     $('.filter-result__col').matchHeight();
     // matchHeight for utility
     $('.detail__utility').matchHeight();
+    // matchHeight for early education
+    $('#early-education .item').matchHeight();
 
     // tooltip for item horizontal
     $('[data-toggle="tooltip"]').tooltip();
@@ -123,6 +125,11 @@ $(function() {
         $('.filter__location').slideDown();
     });
 
+    // show full content in timeline event
+    $('.timeline__event .event__content .text-muted').click(function() {
+        $(this).hide();
+        $(this).parent('.event__content').css('max-height', 'initial');
+    });
 });
 
 /*  ===
@@ -170,4 +177,20 @@ $('.l-slider .slider').bxSlider({
     nextText: '',
     nextSelector: '#bxslider-next',
     prevSelector: '#bxslider-prev'
+});
+
+/*  ===
+    slider for lesson
+    === */
+$('#forkid-lesson').bxSlider({
+    minSlides: 1,
+    maxSlides: 5,
+    slideWidth: 143,
+    slideMargin: 20,
+    pager: false,
+    adaptiveHeight: true,
+    prevText: '',
+    nextText: '',
+    nextSelector: '#forkid-lesson-next',
+    prevSelector: '#forkid-lesson-prev'
 });
